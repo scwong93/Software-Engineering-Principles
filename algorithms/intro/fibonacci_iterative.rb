@@ -1,3 +1,5 @@
+require 'benchmark'
+
 def fib(n)
   fib_0 = 0
   fib_1 = 1
@@ -23,4 +25,7 @@ puts fib(6)
 puts fib(7)
 puts fib(8)
 puts fib(9)
- 
+
+puts Benchmark.measure {
+  fib(20)
+}
